@@ -1,0 +1,37 @@
+# Nome
+nome = input("Digite um nome (superior a 3 caracteres): ")
+while len(nome) <= 3:
+    print("Nome inválido! Deve ter mais de 3 caracteres.")
+    nome = input("Digite novamente o nome: ")
+
+# Idade
+idade = int(input("Digite a idade (0 a 150): "))
+while idade < 0 or idade > 150:
+    print("Idade inválida!")
+    idade = int(input("Digite novamente a idade: "))
+
+# Salário
+salario = float(input("Digite o salário: "))
+while salario <= 0:
+    print("Salário inválido! Deve ser maior que zero.")
+    salario = float(input("Digite novamente o salário: "))
+
+# Sexo
+sexo = input("Digite o sexo (f para feminino, m para masculino): ").lower()
+while sexo not in ['f', 'm']:
+    print("Sexo inválido! Digite apenas 'f' ou 'm'.")
+    sexo = input("Digite novamente o sexo (f/m): ").lower()
+
+# Estado Civil
+estado_civil = input("Digite o estado civil (s, c, v, d): ").lower()
+while estado_civil not in ['s', 'c', 'v', 'd']:
+    print("Estado civil inválido!")
+    estado_civil = input("Digite uma das opções (s, c, v ou d): ").lower()
+
+# Saída
+print("\n--- Dados Validados ---")
+print(f"Nome: {nome}")
+print(f"Idade: {idade}")
+print(f"Salário: {salario}")
+print(f"Sexo: {sexo}")
+print(f"Estado Civil: {estado_civil}")
